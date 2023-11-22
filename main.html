@@ -10,7 +10,8 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
-			arr.sort();
+			arr.sort(function(a, b){return a - b});
+			
 			if(arr.length===0 || arr.length===1){
 				return "-Infinity"
 			}
@@ -22,7 +23,6 @@
 					same = false;
 				i++;
 			}
-
 			if(same){
 				return "-Infinity";
 			} 
